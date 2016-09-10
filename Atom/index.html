@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Atom Development</title>
+<meta name="viewport" content="width=divice-width, initial-scale=1.0">
+<link type="text/css" rel="stylesheet" href="blueberry.css" />
+<style type="text/css">
+    {
+        margin: 0;
+        border: 0;
+        padding: 0;
+    }
+    body {
+        background: #f0f0f0;
+        font: 14px/20px "Segoe UI",Arial,sans-serif;
+        color: #555
+        margin: 0;
+    }
+    h1 {
+        text-align: center;
+        font-size: 180%;
+        line-height: 120%;
+        padding: 5% 0;
+    }
+    h2 {
+        text-decoration: underline;
+        line-height: 280%;
+        padding-left: 2%;
+    }
+    h3 {
+        line-height: 30px;
+        padding: 5% 0;
+    }
+    p {
+        padding: 1%;
+    }
+    img {
+        text-align: center;
+        max-width: 100%;
+        height: auto;
+        width: auto;
+    }
+    a {
+        color: #FFF;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    a:hover {
+        color: #FFF;
+        text-decoration: underline;
+    }
+    header{
+        background: #000;
+        width: 100%;
+        height: 79px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        opacity: 0.90;
+    }
+    #logo {
+        margin: 20px;
+        float: left;
+        width: 200px;
+        height: 60px;
+        background: url(logo.png) no-repeat center;
+    }
+    nav {
+        float: right;
+        padding: 35px 20px 20px 0;
+    }
+    #menu-icon {
+        display: hidden;
+        width: 40px;
+        height: 40px;
+        background: url(http://www.w3newbie.com/wp-content/uploads/icon.png) center;
+    }
+    a:hover#menu-icon {
+        border-radius: 4px 4px 0 0;
+    }
+    ul {
+        list-style: none;
+    }
+    nav ul li {
+        display: inline-block;
+        float: left;
+        padding: 5px;
+    }
+    .current {
+        color: #FFF;
+        text-decoration: underline;
+    }
+    #doc {
+        margin: 40px 0;
+    }
+    #content {
+        margin: 0 auto;
+        max-width: 1140px;
+        margin-top: 110px;
+    }
+    .blueberry {
+        max-width: 960px;
+        margin-top: 110px;
+    }
+    section {
+        width: 29%;
+        float: left;
+        margin: 2% 2%;
+        text-align: center;
+    }
+    .clear {
+        clear: both;
+    }
+    article {
+        float: left;
+        margin: 0 auto;
+        width: 50%;
+        height: auto;
+        padding: 4%;
+    }
+    aside {
+        float: right;
+        margin: 0 auto;
+        width: 35%;
+        height: auto;
+        padding: 3%;
+    }
+    ul.portfolio li {
+        padding-left: 3%;
+    }
+    footer {
+        background: #191919;
+        width: 101%;
+        overflow: hidden;
+        opacity: 0.90;
+        margin-left: -8px;
+       
+    }
+    footer p, footer h3 {
+        color: #FFF;
+    }
+    footer p a {
+        color: #FFF;
+        text-decoration: none;
+    }
+    ul.social li {
+        display: inline;
+    }
+    ul.social li img {
+        height: 50px;
+        padding-left: 10px;
+    }
+    footer.second {
+        border-top: 1px solid #4D4E50;
+        background-color: #191919;
+        max-height: 50px;
+        text-align: center;
+        opacity: 0.95;       
+    }
+    /*----------------MEDIA!!!------------*/
+    @media screen and (max-width: 478px) {
+        body {
+            position: absolute;
+        } 
+    }
+        @media screen and (max-width: 740px) {
+            header {
+                position: absolute;
+            }
+            #menu-icon {
+                display: inline-block;
+            }
+            nav ul, nav:active ul {
+                display: none;
+                position: absolute;
+                padding: 20px;
+                background: #000;
+                border: 1px solid #000;
+                right: 20px;
+                top: 60px;
+                width: 50%;
+                border-radius: 2px 0 2px 2px;
+            }
+            nav li {
+                text-align: center;
+                width: 100%;
+                padding: 10px 0;
+                margin: 0;
+            }
+            nav:hover ul {
+                display: block;
+            }
+            section {
+                float: left;
+                width: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            article {
+                float: left;
+                width: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            aside {
+                float: left;
+                width: 100%;
+                margin: 0;
+                padding: 0;
+            }
+        }  
+    
+    
+    
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+<script src="jquery.blueberry.js"></script>
+<script>
+$(window).load(function() {
+    $('.blueberry').blueberry();
+});
+</script>
+</head>
+<body>
+    <header>
+        <a href="#" id="logo"></a>
+        <nav> 
+            <a href="#" id="menu-icon"></a>
+            <ul>
+                <li><a href="#doc" class="current">HOME</a></li>
+                <li><a href="#portfolio">PROJECTS</a></li>
+                <li><a href="#about">ABOUT US</a></li>
+                <li><a href="#portfolio">PORTFOLIO</a></li>
+                <li><a href="#portolio">DESIGN</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            
+            </ul>
+            
+        
+        
+        </nav>
+    </header>
+    <div id="doc">
+        <div id="content">
+            <div class="blueberry">
+                <ul class="slides">
+                    <li><img src="1.jpeg" /></li>
+                    <li><img src="2.jpeg" /></li>
+                    <li><img src="3.jpeg" /></li>
+                    <li><img src="4.jpeg" /></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="about">
+    <section>
+        <img src="http://www.w3newbie.com/wp-content/uploads/trainers.png" />
+        <h1>About Us</h1>
+        <p>Here at Atom Development, you can find developers who can help you create web projects from scratch, redesign existing web projects, graphic designers, who are always ready to work for you.</p>
+    </section>
+    <section>
+        <img src="http://www.w3newbie.com/wp-content/uploads/location.png" />
+        <h1>Where to Find Us</h1>
+        <p>We are located at the disposal of our customers. We can work remotely, or we can work together accordingly to our customers needs.</p>
+    </section>
+    <section>
+        <img src="http://www.w3newbie.com/wp-content/uploads/check.png" />
+        <h1>How to Apply</h1>
+        <p>You can contact us through our official e-mail, or social media which you can find it on the bottom of the page.</p>
+    </section>
+    </div>
+    <div class="clear"></div>
+    <article id="portfolio">
+        <img src="5.jpeg" />
+    </article>
+    <aside>
+        <h2>Portfolio</h2>
+        <ul class="portfolio">
+            <li><h3>Web Design</h3></li>
+            <li><h3>Web Development</h3></li>
+            <li><h3>Software Quality Assurance</h3></li>
+            <li><h3>Marketing</h3></li>
+        </ul>
+    </aside>
+    <div class="clear"></div>
+    <section>
+        <h1>Graphic Design</h1>
+        <img src="6.jpg" />
+        <p>Our Designers have worked on different projects from simple designs, like business cards, logos, to platform designs from websites and mobile applications.</p>
+    </section>
+    <section>
+        <h1>Web Development</h1>
+        <img src="7.jpeg" />
+        <p>Our Team consists of professional, enthusiastic workers, who excel your idea to a new level. Whether you need Front End Developers, Back End Developers, we got them. </p>
+    </section>
+    <section>
+        <h1>Marketing</h1>
+        <img src="8.jpg" />
+        <p>The Marketing Team is experienced in developing ideas to promote, support, or create a plan for your projects to make them thrive, and flourish through different campaigns.</p>
+    </section>
+    <footer id="contact">
+        <section>
+            <h3><b>Drilona Gashi</b></h3>
+            <p><b>+386(0)49 28 28 77</b><br><br>
+            Nazmi Uksmajli<br>
+            Ferizaj, Kosovo 70000<br>
+                <a href="mailto:drilona.gashi94@gmail.com">drilona.gashi94@gmail.com</a><br></p>
+        </section>
+        <section>
+            <h3>Find us on Social Media</h3>
+            <ul class="social">
+                <li><a href="https://web.facebook.com/drilonadid" target="_blank"><img src="http://www.w3newbie.com/wp-content/uploads/facebook1.png" /></a></li>
+                <li><a href="https://plus.google.com/u/0/108961244804641191712" target="_blank"><img src="http://www.w3newbie.com/wp-content/uploads/googleplus.png" /></a></li>
+                <li><a href="https://twitter.com/DRLNGSH" target="_blank"><img src="http://www.w3newbie.com/wp-content/uploads/twitter1.png" /></a></li>
+            </ul>
+        </section>
+        <section>
+            <br>
+            <br>
+          <img src="logo1.png" />
+            <p><b>The purpose of this site is to display<br> 
+                my personal skills and it doesn't relate<br>
+                to any company with that name.</b></p>
+        </section>
+        
+    </footer>
+    <footer class="second">
+        <p>&copy;Copyright - The Website, 2016.</p>
+    </footer>
+</body>
+</html>
